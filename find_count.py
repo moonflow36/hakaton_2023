@@ -1,6 +1,6 @@
 import csv
 
-with open('bsm_data_train.csv', newline='') as csvfile:
+with open('bsm_data_test.csv', newline='') as csvfile:
     reader = csv.DictReader(csvfile)
     baggages = []
     x =[]
@@ -9,7 +9,13 @@ with open('bsm_data_train.csv', newline='') as csvfile:
     baggages = sorted(baggages)
     bag1 = []
 
-    def count_baggages_per_day():
+
+    def per_day():
+        global baggages
+        return baggages
+    '''def count_baggages_per_day():
+        global baggages
+        print(baggages)
         c = []
         bag1 =[]
         coun = 0
@@ -65,4 +71,4 @@ with open('bsm_data_train.csv', newline='') as csvfile:
     with open('forecast.csv', 'w') as f:
         writer = csv.writer(f)
         for row in count_baggages_per_day():
-            writer.writerow(row)
+            writer.writerow(row)'''
