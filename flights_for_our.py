@@ -19,3 +19,4 @@ with open('flight_rasp_data.csv', newline='') as csvfile:
                     flp.append(count)
                     count = 0
         return flp
+
